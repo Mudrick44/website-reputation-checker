@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Reputation checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>Website Reputation checker</nav>
+    </header>
+    <div>
+      
+     </div>
+    <div class="hero-section">
+      <h1>Website Reputation Checker</h1>
+      <p>Provides instant access to detailed security analysis reports for any domain, leveraging over 70 antivirus products, blocklists, and advanced security tools.</p>
+      
+  </div>
+
+    <div class="container">
+      <div class="input-container">
+        <input
+          type="text"
+          id="webcheckerinput"
+          placeholder="Enter the website address....."
+        />
+        <button id="scanbtn">Scan website</button>
+      </div>
+    </div>
+    
+    <div class="notice" id="noticebanner">
+      <span
+        ><img src="caution.png" width="28px" height="22px" alt="" srcset=""
+      /></span>
+      <p>Make sure to write a correct domain name</p>
+    </div>
+    <div class="loader-section" id="loader-section">
+      <div class="loader"></div>
+    </div>
+    <div id="error-container"></div>
+
+    <div class="result-container" id="result-container">
+      <h2 class="report-header">Report summary</h2>
+      <div class="resultdiv" id="resultDiv">
+        <img src="die-info.png" width="32px" height="28px" alt="" />
+        <p>
+          <span id="maliciousCount">0</span>Security vendors flagged this site
+          as malicious
+        </p>
+      </div>
+
+      <div class="report-container" id="report-container">
+        <div class="malicious">
+          <h1>malicious stats</h1>
+          <span id="malicious">0</span>
+        </div>
+        <div class="suspicious">
+          <h1>Suspicious Stat</h1>
+          <span id="suspicious">0</span>
+        </div>
+        <div class="undetected">
+          <h1>Undetected stat</h1>
+          <span id="undetected">0</span>
+        </div>
+        <div class="harmless">
+          <h1>Harmless stat</h1>
+          <span id="harmless">0</span>
+        </div>
+      </div>
+      <table>
+        <h2 class="table-header">Security Vendor's Analysis and Detections</h2>
+        <thead>
+          <tr>
+            <th><strong>Engine Name</strong></th>
+            <th><strong>Category</strong></th>
+            <th><strong>Result</strong></th>
+          </tr>
+        </thead>
+        <tbody id="data-table-body"></tbody>
+      </table>
+      <div class="category-container">
+        <h2>Category of the Domain from search engines</h2>
+        <div class="categories">
+          <div><strong>Domains Id:</strong></div>
+          <div id="id-domain"></div>
+        </div>
+        <div class="categories">
+          <div><strong>alphaMountain Engine:</strong></div>
+          <div id="alphaMountainEngine"><em>not defined</em></div>
+        </div>
+
+        <div class="categories">
+          <div><strong>Sophos Engine:</strong></div>
+          <div id="sophosEngine"><em>not defined</em></div>
+        </div>
+        <div class="categories">
+          <div><strong>BitDefender Engine:</strong></div>
+          <div id="BitDefender"><em>not defined</em></div>
+        </div>
+        <div class="categories">
+          <div><strong>Xcitium Verdict Engine:</strong></div>
+          <div id="Xcitium"><em>not defined</em></div>
+        </div>
+        <div class="categories">
+          <div><strong>Forcepoint Engine:</strong></div>
+          <div id="Forcepoint"></div>
+        </div>
+      </div>
+      <div class="http-certificate-container">
+        <h2>Last Https Certificate</h2>
+        <div class="jarm-certificate">
+          <h3>Jarm Certificate</h3>
+          <div id="jarm-certificate-display"></div>
+        </div>
+        <div class="cert-cignature">
+          <h3>Certificate Signature Algorithm</h3>
+          <div id="signature-algorithm-display"></div>
+          <div id="signature-display"></div>
+        </div>
+      </div>
+      <div class="dns-container">
+        <h2>DNS Registration Information</h2>
+        <div class="dns-display" id="dns-display"></div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
